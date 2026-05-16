@@ -1,0 +1,110 @@
+.v2-theme {
+  --v2-bg: #0e201d;
+  --v2-bg-soft: #102725;
+  --v2-cream: #ede5d3;
+  --v2-cream-soft: #f1ebda;
+  --v2-paper: #fcfaf5;
+  --v2-ink: #0c1a18;
+  --v2-pink: #e26ebf;
+  --v2-lime: #c8f36d;
+  --v2-yellow: #f5c846;
+  --v2-lavender: #a89af2;
+  --v2-purple: #5630f0;
+  --v2-purple-deep: #4421d4;
+  --v2-coral: #e8836a;
+
+  background-color: var(--v2-bg);
+  color: var(--v2-paper);
+}
+
+.v2-theme :where(*) {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.v2-display {
+  font-family: var(--font-display), Impact, "Arial Narrow", sans-serif;
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+}
+
+.v2-display-tight {
+  font-family: var(--font-display), Impact, "Arial Narrow", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.v2-rainbow-nav {
+  position: relative;
+  background: rgba(14, 32, 29, 0.6);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+.v2-rainbow-nav::before {
+  content: "";
+  position: absolute;
+  inset: -50% -10%;
+  background: conic-gradient(
+    from 200deg,
+    rgba(226, 110, 191, 0.55),
+    rgba(200, 243, 109, 0.5),
+    rgba(245, 200, 70, 0.45),
+    rgba(168, 154, 242, 0.55),
+    rgba(86, 48, 240, 0.4),
+    rgba(226, 110, 191, 0.55)
+  );
+  filter: blur(40px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.v2-pill-shadow {
+  box-shadow:
+    0 10px 24px -8px rgba(86, 48, 240, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.v2-card-outline {
+  border: 1.5px solid var(--v2-ink);
+  box-shadow: 4px 6px 0 0 var(--v2-ink);
+}
+
+.v2-photo-mask {
+  mix-blend-mode: multiply;
+  filter: grayscale(1) contrast(1.05);
+}
+
+.v2-dotted-line {
+  background-image: linear-gradient(
+    to right,
+    rgba(14, 26, 24, 0.4) 0,
+    rgba(14, 26, 24, 0.4) 4px,
+    transparent 4px,
+    transparent 12px
+  );
+  background-size: 12px 2px;
+  background-repeat: repeat-x;
+  background-position: center;
+  height: 2px;
+}
+
+.v2-light :where(*) {
+  border-color: rgba(14, 26, 24, 0.18);
+}
+
+.v2-grain {
+  position: relative;
+}
+.v2-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 4px 4px;
+  opacity: 0.4;
+  mix-blend-mode: overlay;
+}
