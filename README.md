@@ -16,7 +16,7 @@
 ```bash
 npm install --legacy-peer-deps
 npm run dev
-# abra http://localhost:3000
+# abra http://localhost:3050
 ```
 
 ### Credenciais de teste
